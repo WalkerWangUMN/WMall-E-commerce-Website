@@ -1,0 +1,60 @@
+<div class="modal close">
+    <div class="modal-container">
+        <div class="modal-header">
+            {{#isUpdate}}
+            <h1 class="modal-title">Update address</h1>
+            {{/isUpdate}}
+            {{^isUpdate}}
+            <h1 class="modal-title">Use new address</h1>
+            {{/isUpdate}}
+            <i class="fa fa-close close"></i>  
+        </div>
+        <div class="modal-body">
+            <div class="form">
+                <div class="form-line">
+                    <label class="label" for="receiver-name">
+                        <span class="required">*</span>Full name:
+                    </label>
+                    <input class="form-item" id="receiver-name" placeholder="Please input full name" value="{{data.receiverName}}" />
+                </div>
+                <div class="form-line">
+                    <label class="label" for="receiver-province">
+                        <span class="required">*</span>
+                        City:
+                    </label>
+                    <select class="form-item" id="receiver-province">
+                        <option value="">Please select</option>
+                    </select>
+                    <select class="form-item" id="receiver-city">
+                        <option value="">Please select</option>
+                    </select>
+                </div>
+                <div class="form-line">
+                    <label class="label" for="receiver-address">
+                        <span class="required">*</span>
+                        Address line:
+                    </label>
+                    <input class="form-item" id="receiver-address" placeholder="St, Apt, suite, floor, etc" value="{{data.receiverAddress}}"/>
+                </div>
+                <div class="form-line">
+                    <label class="label" for="receiver-phone">
+                        <span class="required">*</span>
+                        Phone number:
+                    </label>
+                    <input class="form-item" id="receiver-phone" placeholder="11 digits phone number"  value="{{data.receiverPhone}}"/>
+                </div>
+                <div class="form-line">
+                    <label class="label" for="receiver-zip">
+                        <span class="required">*</span>
+                        Zipcode:
+                    </label>
+                    <input class="form-item" id="receiver-zip" placeholder="6 digits Zipcode"  value="{{data.receiverZip}}"/>
+                </div>
+                <div class="form-line">
+                    <input type="hidden" id="receiver-id" value="{{data.id}}" />  
+                    <a class="btn address-btn">Save address</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

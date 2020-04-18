@@ -1,0 +1,5 @@
+<p class="payment-tips">Order submitted, please pay soon! Order number: {{orderNo}}</p>
+<p class="payment-tips enhance">Please use Alipay to scan the QR code to pay: </p>
+<div class="img-con">
+    <img src="{{qrUrl}}" alt="QR code" class="qr-code">
+</div>

@@ -1,0 +1,93 @@
+{{#notEmpty}}
+<div class="cart-header">
+    <table class="cart-table">
+        <tr>
+            <th class="cart-cell cell-check">
+                <label class="cart-label">
+                    {{#allChecked}}
+                     <input type="checkbox" class="cart-select-all" checked/>
+                    {{/allChecked}}
+                    {{^allChecked}}
+                     <input type="checkbox" class="cart-select-all"/>
+                    {{/allChecked}}
+                    <span>Select all</span>
+                </label>
+            </th>
+            <th class="cart-cell cell-info">Product detail</th>
+            <th class="cart-cell cell-price">Price</th>
+            <th class="cart-cell cell-count">Qty</th>
+            <th class="cart-cell cell-total">Total</th>
+            <th class="cart-cell cell-opera">Operate</th>
+        </tr>
+    </table>
+</div>
+<div class="cart-list">
+    {{#cartProductVoList}}
+    <table class="cart-table" data-product-id="{{productId}}">
+        <tr>
+            <td class="cart-cell cell-check">
+                    <label class="cart-label">
+                    {{#productChecked}}
+                        <input type="checkbox" class="cart-select" checked/>
+                    {{/productChecked}}
+                    {{^productChecked}}
+                        <input type="checkbox" class="cart-select"/>
+                    {{/productChecked}}
+                </label>
+            </td>
+            <td class="cart-cell cell-img">
+                <a href="./detail.html?productId={{productId}}" class="link">
+                    <img src="{{imageHost}}{{productMainImage}}" alt="{{productName}}" class="p-img"/>
+                </a>
+  
+            </td>
+            <td class="cart-cell cell-info">
+                <a href="./detail.html?productId={{productId}}" class="link">{{productName}}</a>
+            </td>
+            <td class="cart-cell cell-price">{{productPrice}}</td>
+            <td class="cart-cell cell-count">
+                <span class="count-btn minus">-</span>
+                <input class="count-input" value="{{quantity}}" data-max="{{productStock}}" />
+                <span class="count-btn plus">+</span>
+                
+            </td>
+            <td class="cart-cell cell-total">{{productTotalPrice}}</td>
+            <td class="cart-cell cell-opera">
+                <span class="link cart-delete">Delete</span>
+            </td>
+        </tr>
+    </table>
+    {{/cartProductVoList}}
+</div>
+<div class="cart-footer">
+    <div class="select-con">
+        <label>
+            {{#allChecked}}
+                <input type="checkbox" class="cart-select-all" checked/>
+            {{/allChecked}}
+            {{^allChecked}}
+                <input type="checkbox" class="cart-select-all"/>
+            {{/allChecked}}
+            <span>Select all</span>
+        </label>
+    </div>
+    <div class="delete-con">
+        <span class="link delete-selected">
+            <i class="fa fa-trash-o">
+                <span>Delete selected</span>
+            </i>
+        </span>
+    </div>
+    <div class="submit-con">
+        <span>Total: </span>
+        <span class="submit-total">$ {{cartTotalPrice}}</span>
+        <span class="btn btn-submit">Checkout</span>
+    </div>
+</div>
+{{/notEmpty}}
+{{^notEmpty}}
+<p class="err-tip">
+    <span>Your shopping cart is empty,</span>
+    <a href="./index.html">go shopping!</a>
+</p>
+{{/notEmpty}}

@@ -1,0 +1,23 @@
+ <div class="user-info">
+    <div class="form-line">
+        <span class="label">Username: </span>
+        <spn class="text">{{username}}</spn>
+    </div>
+    <div class="form-line">
+        <span class="label">Phone number: </span>
+        <spn class="text">{{phone}}</spn>
+   </div>
+   <div class="form-line">
+        <span class="label">Email: </span>
+        <spn class="text">{{email}}</spn>
+    </div>
+    <div class="form-line">
+        <span class="label">Security question: </span>
+        <spn class="text">{{question}}</spn>
+    </div>
+    <div class="form-line">
+        <span class="label">Answer: </span>
+        <spn class="text">{{answer}}</spn>
+    </div>
+        <a class="btn btn-submit" href="./user-center-update.html">Edit</a>
+</div>

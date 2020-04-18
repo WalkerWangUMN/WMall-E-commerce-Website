@@ -1,0 +1,50 @@
+<table class="order-list-table header">
+    <tr>
+        <th class="cell cell-img">&nbsp;</th>
+        <th class="cell cell-info">Product detail</th>
+        <th class="cell cell-price">Price</th>
+        <th class="cell cell-count">Qty</th>
+        <th class="cell cell-total">Subtotal</th>
+    </tr>
+</table>
+
+{{#list}}
+<table class="order-list-table order-item">
+    <tr>
+        <td colspan="5" class="order-info">
+            <span class="order-text">
+                <span>Order number:</span>
+                <a href="./order-detail.html?orderNumber={{orderNo}}" class="link order-num" target="_blank">{{orderNo}}</a>
+            </span>
+            <span class="order-text">{{createTime}}</span>
+            <span class="order-text">Receiver: {{receiverName}}</span>
+            <span class="order-dtext">Order status: {{statusDesc}}</span>
+            <span class="order-text">
+                <span>Order price:</span>
+                <span class="order-total">${{payment}}</span>
+            </span>
+            <a href="./order-detail.html?orderNumber={{orderNo}}" class="link order-detail" target="_blank">Order detail></a>
+        </td>
+    </tr>
+    {{#orderItemVoList}}
+    <tr>
+        <td class="cell cell-img">
+            <a href="./detail.html?productId={{productId}}" target="_blank">
+                <img src="{{imageHost}}{{productImage}}" alt="{{productName}}" class="p-img" />
+            </a>
+        </td>
+        <td class="cell cell-info">
+            <a href="./detail.html?productId={{productId}}" target="_blank" class="link">
+                {{productName}}
+            </a>
+        </td>
+        <td class="cell cell-price">${{currentUnitPrice}}</td>
+        <td class="cell cell-count">{{quantity}}</td>
+        <td class="cell cell-total">${{totalPrice}}</td>
+    </tr>
+    {{/orderItemVoList}}
+</table>
+{{/list}}
+{{^list}}
+    <p class="err-tip">You don't have order now</p>
+{{/list}}

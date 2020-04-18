@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= require('html-loader!./layout/head-common.html') %>
+        <title><%= htmlWebpackPlugin.options.title%> - WMall</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav-simple.html') %>
+        <div class="page-wrap w">
+            <div class="result-con register-success">
+                <h1 class="result-title">Congratulations, sign up success!</h1>
+                <div class="result-content">
+                    <a href="./index.html" class="link">Back to homepage</a>
+                    <a href="./user-login.html" class="link">Log in</a>
+                </div>
+            </div>
+            <div class="result-con pass-reset-success">
+                <h1 class="result-title">Congratulations, reset password success!</h1>
+                <div class="result-content">
+                    <a href="./index.html" class="link">Back to homepage</a>
+                    <a href="./user-login.html" class="link">Log in</a>
+                </div>
+            </div>
+            <div class="result-con cart-add-success">
+                <h1 class="result-title">Added to cart!</h1>
+                <div class="result-content">
+                    <a href="./index.html" class="link">Continue shopping</a>
+                    <a href="./cart.html" class="link">Cart</a>
+                </div>
+            </div>
+            <div class="result-con payment-success">
+                <h1 class="result-title">Order payment success!</h1>
+                <div class="result-content">
+                    <a href="./index.html" class="link">Continue shopping</a>
+                    <a href="./order-detail.html?orderNumber=" class="link order-number">Order detail</a>
+                </div>
+            </div>
+            <div class="result-con default-success">
+                <h1 class="result-title">Congratulations, success!</h1>
+                <div class="result-content">
+                    <a href="./index.html" class="link">Back to homepage</a>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!./layout/footer.html') %>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= require('html-loader!./layout/head-common.html') %>
+        <title><%= htmlWebpackPlugin.options.title%> - WMall</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav-simple.html') %>
+        <div class="page-wrap">
+            <div class="w">
+                <div class="user-con">
+                    <div class="user-title">Password reset</div>
+                    <div class="user-box">
+                        <div class="error-item">
+                            <i class="fa fa-minus-circle error-icon"></i>
+                            <p class="err-msg">Error</p>
+                        </div>
+                        <div class="step-con step-username">
+                            <p class="user-item-text">
+                                Please input username:
+                            </p>
+                            <div class="user-item">
+                                <label class="user-label" for="">
+                                    <i class="fa fa-user"></i>
+                                </label>
+                                <input class="user-content" id="username" placeholder="Please input username" autocomplete="off">
+                            </div>
+                            <a class="btn btn-submit" id="submit-username">Next step</a>
+                        </div>
+                        <div class="step-con step-question">
+                            <p class="user-item-text">
+                                Security answer: <span class="question"></span>
+                            </p>
+                            <div class="user-item">
+                                <label class="user-label" for="">
+                                    <i class="fa fa-key"></i>
+                                </label>
+                                <input class="user-content" id="answer" placeholder="Please input answer" autocomplete="off">
+                            </div>
+                            <a class="btn btn-submit" id="submit-question">Next step</a>
+                        </div>
+                        <div class="step-con step-password">
+                            <p class="user-item-text">
+                                Please input new password:
+                            </p>
+                            <div class="user-item">
+                                <label class="user-label" for="">
+                                    <i class="fa fa-lock"></i>
+                                </label>
+                                <input type="password" class="user-content" id="password" placeholder="Please input new password" autocomplete="off">
+                            </div>
+                            <a class="btn btn-submit" id="submit-password">Next step</a>
+                        </div>
+                       
+                        <div class="link-item">
+                            <a class="link" href="./user-pass-reset.html" target="_blank">Back to login>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!./layout/footer.html') %>
+    </body>
+</html>

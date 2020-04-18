@@ -1,0 +1,22 @@
+/*
+ * @Author: WalkerWang 
+ * @Date: 2020-01-15 23:03:28 
+ * @Last Modified by: WalkerWang
+ * @Last Modified time: 2020-01-15 23:05:58
+ */
+ .footer {
+     padding-bottom: 10px;
+ }
+.footer .links {
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.copyright {
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
